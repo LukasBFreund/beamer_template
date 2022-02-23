@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.5.28)  23 FEB 2022 18:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.5.28)  23 FEB 2022 18:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**LF_BeamerTemplate_Apr2021.tex
-(./LF_BeamerTemplate_Apr2021.tex
+**lbf_beamer_template_20220223.tex
+(./lbf_beamer_template_20220223.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-05-27>
 (c:/texlive/2021/texmf-dist/tex/latex/beamer/beamer.cls
@@ -979,8 +979,8 @@ File: l3backend-pdftex.def 2021-05-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count365
 \l__pdf_internal_box=\box83
 )
-(./LF_BeamerTemplate_Apr2021.aux)
-\openout1 = `LF_BeamerTemplate_Apr2021.aux'.
+(./lbf_beamer_template_20220223.aux)
+\openout1 = `lbf_beamer_template_20220223.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 226.
 LaTeX Font Info:    ... okay on input line 226.
@@ -1074,9 +1074,9 @@ LaTeX Info: Redefining \ref on input line 226.
 LaTeX Info: Redefining \pageref on input line 226.
 LaTeX Info: Redefining \nameref on input line 226.
 
-(./LF_BeamerTemplate_Apr2021.out) (./LF_BeamerTemplate_Apr2021.out)
+(./lbf_beamer_template_20220223.out) (./lbf_beamer_template_20220223.out)
 \@outlinefile=\write5
-\openout5 = `LF_BeamerTemplate_Apr2021.out'.
+\openout5 = `lbf_beamer_template_20220223.out'.
 
 
 (c:/texlive/2021/texmf-dist/tex/latex/translator/translator-basic-dictionary-En
@@ -1108,7 +1108,7 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@mv@tabular=\count373
 \c@mv@boldtabular=\count374
- (./LF_BeamerTemplate_Apr2021.nav)
+ (./lbf_beamer_template_20220223.nav)
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' in size <5> not available
 (Font)              Font shape `T1/FiraSans-OsF/regular/n' tried instead on inp
 ut line 226.
@@ -1232,17 +1232,17 @@ Overfull \hbox (69.59534pt too wide) has occurred while \output is active
 
 ]
 \tf@nav=\write6
-\openout6 = `LF_BeamerTemplate_Apr2021.nav'.
+\openout6 = `lbf_beamer_template_20220223.nav'.
 
 \tf@toc=\write7
-\openout7 = `LF_BeamerTemplate_Apr2021.toc'.
+\openout7 = `lbf_beamer_template_20220223.toc'.
 
 \tf@snm=\write8
-\openout8 = `LF_BeamerTemplate_Apr2021.snm'.
+\openout8 = `lbf_beamer_template_20220223.snm'.
 
- (./LF_BeamerTemplate_Apr2021.aux)
-Package rerunfilecheck Info: File `LF_BeamerTemplate_Apr2021.out' has not chang
-ed.
+ (./lbf_beamer_template_20220223.aux)
+Package rerunfilecheck Info: File `lbf_beamer_template_20220223.out' has not ch
+anged.
 (rerunfilecheck)             Checksum: 48B8641387CB8A372190172184941E28;698.
  )
 (\end occurred inside a group at level 1)
@@ -1251,19 +1251,19 @@ ed.
 ### bottom level 
 Here is how much of TeX's memory you used:
  28427 strings out of 478754
- 551376 string characters out of 5858221
- 825305 words of memory out of 5000000
+ 551439 string characters out of 5858221
+ 825323 words of memory out of 5000000
  45515 multiletter control sequences out of 15000+600000
  571223 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,16n,108p,1804b,893s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 101i,16n,108p,1807b,893s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/fira/fir_d67aat.enc
 }{c:/texlive/2021/texmf-dist/fonts/enc/dvips/fira/fir_iln36p.enc}<c:/texlive/20
 21/texmf-dist/fonts/type1/public/fira/FiraSans-Bold.pfb><c:/texlive/2021/texmf-
 dist/fonts/type1/public/fira/FiraSans-Italic.pfb><c:/texlive/2021/texmf-dist/fo
 nts/type1/public/fira/FiraSans-Regular.pfb><c:/texlive/2021/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmsy8.pfb>
-Output written on LF_BeamerTemplate_Apr2021.pdf (7 pages, 65950 bytes).
+Output written on lbf_beamer_template_20220223.pdf (7 pages, 65950 bytes).
 PDF statistics:
  122 PDF objects out of 1000 (max. 8388607)
  99 compressed objects within 1 object stream
