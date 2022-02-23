@@ -1,0 +1,352 @@
+%---------------------------------------------------------------------------------------
+%
+%	Template: Slides
+% 	Lukas B. Freund
+%	lukas.beat.freund@gmail.com
+%	Last updated: April 2021
+%
+%----------------------------------------------------------------------------------------
+
+%% ---------------------------------------------------------------------------
+%% Original Copyright Notice
+
+%% Copyright 2015 Matthias Vogelgesang and the LaTeX community. A full list of
+%% contributors can be found at
+%%
+%%     https://github.com/matze/mtheme/graphs/contributors
+%%
+%% and the original template was based on the HSRM theme by Benjamin Weiss.
+%%
+%% This work is licensed under a Creative Commons Attribution-ShareAlike 4.0
+%% International License (https://creativecommons.org/licenses/by-sa/4.0/).
+%% ---------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	Key Settings
+%----------------------------------------------------------------------------------------
+%\documentclass[9pt]{beamer}
+\documentclass[9pt,handout,serif]{beamer} %for handouts
+\usepackage[authoryear, round]{natbib}
+
+%----------------------------------------------------------------------------------------
+% Other Packages
+%----------------------------------------------------------------------------------------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[flushleft]{threeparttable}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{positioning}
+\usepackage{color}
+\usepackage{graphicx} % Allows including images
+\usepackage{amssymb}
+\usepackage{longtable,booktabs} 
+\usepackage{marvosym}
+\usepackage{csquotes}
+\usepackage {subfig}
+%\usepackage{ctable}
+%\usepackage {pxfonts} %
+\usepackage[sfdefault]{FiraSans} %% option 'sfdefault' activates Fira Sans as the default text font
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
+
+\hypersetup{
+%		colorlinks=true, %set true if you want colored links
+	%	linktoc=all,     %set to all if you want both sections and subsections linked
+%		linkcolor=blue,  %choose some color if you want links to stand out
+	citecolor = LightGrey,
+	urlcolor  = blue,
+}
+
+
+\theoremstyle{plain}
+\newtheorem{remark}{Remark}
+\newtheorem{proposition}{Proposition}
+%\newtheorem{lemma}{Lemma}
+%----------------------------------------------------------------------------------------
+% Own Commands
+%----------------------------------------------------------------------------------------
+
+
+\newcommand\highlight[1]{\textcolor{LFBlue}{\textbf{#1}}}
+\newcommand{\cit}[1]{{\footnotesize \textit{ \textcolor{LightGrey}{#1}}}}
+
+
+\newenvironment{wideitemize}{\itemize\addtolength{\itemsep}{10pt}}{\enditemize}
+\newenvironment{transitionframe}{
+%	\setbeamercolor{background canvas}{bg=yellow}
+	\addtocounter{framenumber}{-1}
+	\setbeamertemplate{footline}{} 
+	\setbeamertemplate{headline}{}
+	\begin{frame}}{
+\end{frame}
+}
+\newcommand\lreqn[2]{\noindent\makebox[\textwidth]{$\displaystyle#1$\hfill#2}\vspace{2ex}}
+\newcommand\myeq{\mathrel{\overset{\makebox[0pt]{\mbox{\normalfont\tiny\sffamily iid}}}{\thicksim}}}
+
+% Create command such that extra slides are counted as "excess" over standard slides
+\newcommand{\backupbegin}{
+	\newcounter{finalframe}
+	\setcounter{finalframe}{\value{framenumber}}
+}
+\newcommand{\backupend}{
+	\setcounter{framenumber}{\value{finalframe}}
+}
+
+\DeclareMathOperator*{\maxi}{max}
+\DeclareMathOperator*{\mini}{min}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Var}{\mathrm{Var}}
+
+\newcommand{\itemtwo}{\item[$\circ$]}
+\newcommand{\CrossSymbol}{\mathbin{\tikz [x=1.4ex,y=1.4ex,line width=.2ex] \draw (0,0) -- (1,1) (0,1) -- (1,0);}}%
+\newcommand*{\TakeFourierOrnament}[1]{{%
+		\fontencoding{U}\fontfamily{futs}\selectfont\char#1}}
+\newcommand*{\DangerSymbol}{\TakeFourierOrnament{66}}
+
+\makeatletter
+\newcommand{\xRightarrow}[2][]{\ext@arrow 0359\Rightarrowfill@{#1}{#2}}
+\makeatother
+
+%----------------------------------------------------------------------------------------
+% Design
+%----------------------------------------------------------------------------------------
+% Modify theme
+\useoutertheme[footline=authortitle]{miniframes} % Alternatively: miniframes, infolines, 
+\useinnertheme{circles}
+\setbeamertemplate{navigation symbols}{} %get rid of navigation symbols
+\mode<presentation> {\usetheme{default} 
+\setbeamertemplate{page number in head/foot}[appendixframenumber]
+%\setbeamertemplate{frametitle}{\color{LFBlue}\scshape\insertframetitle\par\vskip-6pt}
+%\setbeamertemplate{frametitle}{\color{black}\bfseries\insertframetitle\par\vskip-6pt\hrulefill}
+\setbeamertemplate{frametitle}{%
+\hspace*{-0.4em}\insertframetitle\strut%
+%\hspace*{-0.1em}	\vspace{0em} {\color{LightGrey}\hrule}\vspace{0.2em}	
+\nointerlineskip
+}
+
+% define some colors
+	\definecolor{LFBlue}{RGB}{0,51,102} 	%{63,84,127} 	%{4,30,100} % 4, 30, 66 => OxfordBlue
+	\definecolor{Oxfordgrey}{rgb}{221, 221, 221} 	%{0.3686, 0.5255, 0.6235} % (secondary)
+	\definecolor{LightGrey}{RGB}{153, 159, 173} 	%{rgb}{0.3686, 0.5255, 0.6235} % (secondary)
+		\definecolor{LFOrange}{RGB}{255,153,51} 	%{rgb}{1, 0.5608, 0}
+	\definecolor{DarkRed}{RGB}{119,17,0}
+	\definecolor{LightBlue}{RGB}{30,144,250} 		%{139,0,0}
+	\definecolor{DarkGrey}{RGB}{112, 128, 144} 	%{97,99,101}
+	
+	
+\usecolortheme[named=LFBlue]{structure}
+\setbeamercolor{palette primary}{bg=LFBlue,fg=white}
+\setbeamercolor{palette secondary}{bg=LFBlue,fg=white}
+\setbeamercolor{palette tertiary}{bg=white,fg=LightGrey}
+\setbeamercolor{palette quaternary}{bg=LightGrey,fg=white}
+\setbeamercolor{structure}{fg=LFBlue} % itemize, enumerate, etc
+\setbeamercolor{section in toc}{fg=LFBlue} % TOC sections
+\setbeamercolor{title in head/foot}{fg=LFBlue,bg=LFBlue}
+\setbeamercolor{date in head/foot}{bg=LFBlue}
+\setbeamercolor{part title}{fg=LFBlue}
+\setbeamercolor{author in head/foot}{bg=LFBlue, fg=white}
+\setbeamercolor{institute in head/foot}{fg=white}
+\setbeamercolor{button}{bg=DarkGrey,fg=white}
+
+
+%Metropolis setup
+\usetheme[progressbar=frametitle]{metropolis}
+\setbeamercolor{progress bar}{fg=LFOrange,bg=LightGrey}
+%\metroset{sectionpage=simple}
+%\metroset{sectionpage=simple}
+\setbeamercolor{block title example}{fg=black,bg=white}
+\setbeamercolor{block body example}{fg=white,bg=LightGrey}
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{frametitle}{bg=LightGrey, fg=white}
+\setbeamercolor{block body}{fg=white,bg=LightGrey}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\setbeamercolor{section in head/foot}{bg=LightGrey,fg=white}
+\setbeamercolor{subsection in head/foot}{bg=Oxfordgrey,fg=white}
+
+% Set headline
+	
+\makeatletter
+\setbeamertemplate{headline}{%
+	\leavevmode%
+	\begin{beamercolorbox}[sep=0.1cm,wd=\textwidth]{palette quaternary}
+		%{section in head/foot}%
+					\hspace*{-0.4em}
+			\insertsectionnavigationhorizontal{0.1\paperwidth}{}{\hskip0.1pt}
+			\hspace*{-0.4em}
+	\end{beamercolorbox}%
+}
+}
+
+
+
+\defbeamertemplate*{title page}{customized}[1][]
+{
+	%\usebeamerfont{title}
+	\inserttitle\par
+	\vspace{1.7em} 	{\color{LFOrange}\hrule}\vspace{1.7em}	
+	{\small\insertauthor}\par
+	\bigskip
+	\bigskip
+	{\small	\usebeamerfont{date}\insertdate}\par
+	\bigskip
+	\bigskip
+	\usebeamerfont{institute}\insertinstitute
+	\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
+}
+
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{TITLE} 
+
+\author{
+	Author 1\inst{1}
+	\and
+	Author 2\inst{2}
+}
+
+\institute
+{
+	\inst{}%
+	Institution 1
+	\and
+	\inst{}%
+	Institution 2
+}
+
+\date{\textit{Date}
+	\\[1em]
+	{ \textit{Place}}
+}
+
+\begin{document}
+
+{
+	\setbeamertemplate{footline}{} 
+	\setbeamertemplate{headline}{}
+\begin{frame}
+	\titlepage
+\end{frame}
+}
+\addtocounter{framenumber}{-1}
+
+\setbeamertemplate{footline}
+{
+}
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+{
+\metroset{sectionpage=none}
+%------------------------------------------------
+\section{Section name} 
+%------------------------------------------------
+}
+
+\begin{frame}
+\frametitle{Frame title
+\hfill 
+\hyperlink{reference_app}{\beamergotobutton{Button name}}
+}
+\hypertarget{reference_main}{}
+
+	
+\bigskip
+\begin{itemize}
+	\item Bla
+\end{itemize}
+\end{frame}
+%--------------------------------------------------------------------------
+
+%------------------------------------------------
+\section{Section name} 
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Frame title}
+\bigskip
+\begin{itemize}
+	\item text
+\end{itemize}
+\end{frame}
+
+%--------------------------------------------------------------------------
+
+
+%--------------------------------------------------------------------------
+%	APPENDIX
+%--------------------------------------------------------------------------
+
+{
+	\metroset{sectionpage=none}
+
+\section*{Extra Slides}
+}
+\appendix
+\backupbegin
+
+
+%----------------------------------------------------------------------------------------
+{
+%\setbeamertemplate{footline}{} 
+%\setbeamertemplate{headline}{}
+%\begin{frame}
+%\huge{\color{LFBlue}\sc{Appendix}}
+%\end{frame}
+%}
+%\addtocounter{framenumber}{-1}
+
+
+{
+\setbeamertemplate{headline}{}
+%\setbeamertemplate{footline}{} 
+
+\setbeamertemplate{headline}{%
+\leavevmode%
+\begin{beamercolorbox}[sep=0.1cm,wd=\textwidth]{palette quaternary}
+%{section in head/foot}%
+\hspace*{-0.4em}
+\insertsectionnavigationhorizontal{0.1\paperwidth}{}{\hskip0.1pt}
+\hspace*{-0.4em}
+\end{beamercolorbox}%
+}
+
+
+%----------------------------------------------------------------------------------------
+\section{Extra Slides}
+%----------------------------------------------------------------------------------------
+
+%--------------------------------------------------------------------------
+\section{Extra slides section name} 
+%--------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Frame title
+\hfill 
+\hyperlink{reference_main}{\beamergotobutton{Main}}
+}
+\hypertarget{reference_app}{}
+\bigskip
+\begin{itemize}
+	\item text
+\end{itemize}
+\end{frame}
+
+%--------------------------------------------------------------------------
+
+
+} 
+
+
+\backupend
+
+
+\end{document}
+
+
