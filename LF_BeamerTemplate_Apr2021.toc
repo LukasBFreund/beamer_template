@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Section name}{2}{0}{1}
+\beamer@sectionintoc {2}{Section name}{3}{0}{2}
+\beamer@sectionintoc {4}{Extra Slides}{5}{1}{3}
+\beamer@sectionintoc {5}{Extra slides section name}{6}{1}{4}
